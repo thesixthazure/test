@@ -1,3 +1,4 @@
+//è®¡ç®—æœº2204 é»„ç¥¥è¾‰
 #define _CRT_SECURE_NO_WARNINGS
 
 #include<stdio.h>
@@ -15,7 +16,7 @@ Node* shoppingList = NULL;
 Node* shoppingList2 = NULL;
 
 
-//1 Ìí¼ÓÉÌÆ·
+//1 æ·»åŠ å•†å“
 void addItem(char itemName[], int itemQuantity)
 {
 	Node* newItem = (Node*)malloc(sizeof(Node));
@@ -57,11 +58,11 @@ void addItem2(char itemName[], int itemQuantity)
 }
 
 
-//2 É¾³ıÉÌÆ·
+//2 åˆ é™¤å•†å“
 void removeItem(char itemName[])
 {
 
-	printf("É¾³ıÉÌÆ·ºóµÄÇåµ¥£º\n");
+	printf("åˆ é™¤å•†å“åçš„æ¸…å•ï¼š\n");
 	Node* p=shoppingList;
 	Node* pre=NULL;
 
@@ -87,14 +88,14 @@ void removeItem(char itemName[])
 
 }
 
-//3 Êä³ö¹ºÎïÇåµ¥
+//3 è¾“å‡ºè´­ç‰©æ¸…å•
 void myprintf()
 {
 
 	Node* current = shoppingList;
 	int c = 0;
 
-	printf("¹ºÎïÇåµ¥£º\n");
+	printf("è´­ç‰©æ¸…å•ï¼š\n");
 	while (current)
 	{
 		c++;
@@ -103,7 +104,7 @@ void myprintf()
 	}
 	if (c == 0)
 	{
-		printf("Ã»ÓĞÉÌÆ·£¡\n");
+		printf("æ²¡æœ‰å•†å“ï¼\n");
 	}
 	
 }
@@ -114,7 +115,7 @@ void myprintf2()
 	Node* current = shoppingList2;
 	int c = 0;
 
-	printf("¹ºÎïÇåµ¥£º\n");
+	printf("è´­ç‰©æ¸…å•ï¼š\n");
 	while (current)
 	{
 		c++;
@@ -123,15 +124,15 @@ void myprintf2()
 	}
 	if (c == 0)
 	{
-		printf("Ã»ÓĞÉÌÆ·£¡\n");
+		printf("æ²¡æœ‰å•†å“ï¼\n");
 	}
 
 }
 
-//4 ĞŞ¸ÄÉÌÆ·ÊıÁ¿
+//4 ä¿®æ”¹å•†å“æ•°é‡
 void updataQuantity(char itemName[], int newItemQuantity)
 {
-	printf("ĞŞ¸ÄÉÌÆ·ÊıÁ¿ºóµÄÇåµ¥£º\n");
+	printf("ä¿®æ”¹å•†å“æ•°é‡åçš„æ¸…å•ï¼š\n");
 
 	Node* p = shoppingList;
 	while (p)
@@ -145,7 +146,7 @@ void updataQuantity(char itemName[], int newItemQuantity)
 	}
 }
 
-//5 Çå¿Õ¹ºÎïÇåµ¥
+//5 æ¸…ç©ºè´­ç‰©æ¸…å•
 void clearList()
 {
 	Node* temp;
@@ -157,7 +158,7 @@ void clearList()
 	}
 }
 
-//6 ¼ÆËãÉÌÆ·ÊıÁ¿
+//6 è®¡ç®—å•†å“æ•°é‡
 int totalQuantity()
 {
 	Node* p = shoppingList;
@@ -171,26 +172,26 @@ int totalQuantity()
 }
 
 
-//7 ²éÕÒÉÌÆ·
+//7 æŸ¥æ‰¾å•†å“
 void findItem(char itemName[])
 {
 	Node* p = shoppingList;
 	
-	printf("²éÕÒÉÌÆ·£º%s\n", itemName);
+	printf("æŸ¥æ‰¾å•†å“ï¼š%s\n", itemName);
 	while (p)
 	{
 		if (strcmp(p->name, itemName) == 0)
 		{
-			printf("%s - ÊıÁ¿£º%d\n",p->name, p -> quantity);
+			printf("%s - æ•°é‡ï¼š%d\n",p->name, p -> quantity);
 			return;
 		}
 		p = p->next;
 	}
 
-	printf("Î´ÕÒµ½ÉÌÆ·\n");
+	printf("æœªæ‰¾åˆ°å•†å“\n");
 }
 
-//8 ÅÅĞò¹ºÎïÇåµ¥
+//8 æ’åºè´­ç‰©æ¸…å•
 void sortList()
 {
 	Node* p = shoppingList;
@@ -220,7 +221,7 @@ void sortList()
 	}
 }
 
-//9 ºÏ²¢¹ºÎïÇåµ¥
+//9 åˆå¹¶è´­ç‰©æ¸…å•
 void  mergeLists(Node** list1,Node** list2)
 {
 	Node* p = *list1;
@@ -241,7 +242,7 @@ void  mergeLists(Node** list1,Node** list2)
 	
 }
 
-//10 É¾³ıÉÌÆ·,0ÎªÉ¾³ıÒ»¸ö£¬1ÎªÉ¾³ı¶à¸ö
+//10 åˆ é™¤å•†å“,0ä¸ºåˆ é™¤ä¸€ä¸ªï¼Œ1ä¸ºåˆ é™¤å¤šä¸ª
 void deleteItem(char itemName[], int deleteAll)
 {
 	Node* p = shoppingList;
@@ -278,16 +279,16 @@ void deleteItem(char itemName[], int deleteAll)
 
 int main()
 {
-	//²âÊÔÓÃ£¬×¢ÊÍµÄÄÚÈİ¿ÉÒÔÒ»´ÎĞÔÊ¹ÓÃÈ«²¿µÄ¹¦ÄÜº¯Êı½Ó¿Ú
+	//æµ‹è¯•ç”¨ï¼Œæ³¨é‡Šçš„å†…å®¹å¯ä»¥ä¸€æ¬¡æ€§ä½¿ç”¨å…¨éƒ¨çš„åŠŸèƒ½å‡½æ•°æ¥å£
 	
 
 
 
-	//¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-	//char apple[20] ="Æ»¹û";
-	//char banana[20] = "Ïã½¶";
-	//char book[20] = "Êé";
-	//char rice[20] = "Ã×·¹";
+	//â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+	//char apple[20] ="è‹¹æœ";
+	//char banana[20] = "é¦™è•‰";
+	//char book[20] = "ä¹¦";
+	//char rice[20] = "ç±³é¥­";
 	//addItem(book, 2);
 	//addItem(apple, 3);
 	//addItem(rice, 2);
@@ -307,8 +308,8 @@ int main()
 	//myprintf();
 	//printf("\n");
 
-	////É¾³ıºó»Ö¸´Ò»ÏÂ
-	//printf("»Ö¸´ºó£º\n");
+	////åˆ é™¤åæ¢å¤ä¸€ä¸‹
+	//printf("æ¢å¤åï¼š\n");
 	//addItem(book, 2);
 	//addItem(apple, 3);
 	//addItem(rice, 2);
@@ -318,42 +319,42 @@ int main()
 	//printf("\n");
 
 	//
-	//printf("ÉÌÆ·ÊıÁ¿ÊÇ£º%d\n", totalQuantity());
+	//printf("å•†å“æ•°é‡æ˜¯ï¼š%d\n", totalQuantity());
 	//printf("\n");
 
 	//findItem(apple);
 	//printf("\n");
 
-	//printf("ÅÅĞòºóµÄ¹ºÎïÇåµ¥£º\n");
+	//printf("æ’åºåçš„è´­ç‰©æ¸…å•ï¼š\n");
 	//sortList();
 	//myprintf();
 	//printf("\n");
 
 
-	//printf("ºÏ²¢Á½¸öÇåµ¥£¬½«ÁíÒ»¸ö¸Õ´´½¨µÄ²¢µ½ÏÈÇ°µÄÇåµ¥\n");
-	//char a[20] = "ÂÜ²·";
-	//char b[20] = "Íæ¾ß";
-	//char c[20] = "Ë®±­";
-	//char d[20] = "¿óÈªË®";
+	//printf("åˆå¹¶ä¸¤ä¸ªæ¸…å•ï¼Œå°†å¦ä¸€ä¸ªåˆšåˆ›å»ºçš„å¹¶åˆ°å…ˆå‰çš„æ¸…å•\n");
+	//char a[20] = "èåœ";
+	//char b[20] = "ç©å…·";
+	//char c[20] = "æ°´æ¯";
+	//char d[20] = "çŸ¿æ³‰æ°´";
 
 	//addItem2(a, 2);
 	//addItem2(b, 3);
 	//addItem2(c, 2);
 	//addItem2(d, 7);
 	//addItem2(d, 7);
-	//printf("µÚ¶ş¸öÇåµ¥£º\n");
+	//printf("ç¬¬äºŒä¸ªæ¸…å•ï¼š\n");
 	//myprintf2();
 	//printf("\n");
-	//printf("Á¬½Óºó:\n");
+	//printf("è¿æ¥å:\n");
 	//mergeLists(shoppingList, shoppingList2);
 	//myprintf();
 	//printf("\n");
 
-	//printf("É¾³ıÉÌÆ·ºóµÄÇåµ¥£º\n");
+	//printf("åˆ é™¤å•†å“åçš„æ¸…å•ï¼š\n");
 	//deleteItem(rice, 1);
 	//myprintf();
 	//--------------------------------------------------------------------------
-	printf("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª---------------»¶Ó­À´µ½¹ºÎïÇåµ¥½çÃæ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª-------¡ª¡ª¡ª\n");
+	printf("â€”â€”â€”â€”â€”â€”â€”â€”---------------æ¬¢è¿æ¥åˆ°è´­ç‰©æ¸…å•ç•Œé¢â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”-------â€”â€”â€”\n");
 	printf("\n");
 	int x=1;
 	char good[20];
@@ -362,17 +363,17 @@ int main()
 
 	while (x)
 	{
-		printf("ÇëÑ¡ÔñÄãÒª½øĞĞµÄ²Ù×÷£º1-Ìí¼ÓÉÌÆ·                2-ÒÆ³ıÉÌÆ·           3-²é¿´¹ºÎïÇåµ¥\n");
-		printf("                      4-ĞŞ¸ÄÇåµ¥ÖĞÉÌÆ·µÄÊıÁ¿    5-Çå¿Õ¹ºÎï³µ         6-¼ÆËãÉÌÆ·×ÜÊıÁ¿  \n");
-		printf("                      7-²éÕÒÉÌÆ·                8-ÅÅĞòÇåµ¥           9-Á´½ÓÁ½¸öÇåµ¥(list2ÒÑ¾­´´½¨ºÃ) \n");
-		printf("                      10-É¾³ıÉÌÆ·\n");
+		printf("è¯·é€‰æ‹©ä½ è¦è¿›è¡Œçš„æ“ä½œï¼š1-æ·»åŠ å•†å“                2-ç§»é™¤å•†å“           3-æŸ¥çœ‹è´­ç‰©æ¸…å•\n");
+		printf("                      4-ä¿®æ”¹æ¸…å•ä¸­å•†å“çš„æ•°é‡    5-æ¸…ç©ºè´­ç‰©è½¦         6-è®¡ç®—å•†å“æ€»æ•°é‡  \n");
+		printf("                      7-æŸ¥æ‰¾å•†å“                8-æ’åºæ¸…å•           9-é“¾æ¥ä¸¤ä¸ªæ¸…å•(list2å·²ç»åˆ›å»ºå¥½) \n");
+		printf("                      10-åˆ é™¤å•†å“\n");
 
 		scanf("%d", &x);
 		switch (x)
 		{
 		case 1:
 		{
-			printf("ÊäÈëÌí¼ÓÉÌÆ·µÄÃû×ÖºÍÊıÁ¿:");
+			printf("è¾“å…¥æ·»åŠ å•†å“çš„åå­—å’Œæ•°é‡:");
 			scanf("%s%d", &good,&num);
 			addItem(good, num);
 			myprintf();
@@ -398,7 +399,7 @@ int main()
 		{
 			char updata_name[20];
 			int updata_quantity;
-			printf("ÊäÈëÒªĞŞ¸ÄÉÌÆ·µÄÃû³ÆºÍÊıÁ¿£º\n");
+			printf("è¾“å…¥è¦ä¿®æ”¹å•†å“çš„åç§°å’Œæ•°é‡ï¼š\n");
 			scanf("%s%d", &updata_name, &updata_quantity);
 			updataQuantity(updata_name, updata_quantity);
 			printf("\n");
@@ -412,14 +413,14 @@ int main()
 		}
 		case 6:
 		{
-			printf("ÉÌÆ·µÄ×ÜÊıÁ¿ÊÇ£º%d", totalQuantity());
+			printf("å•†å“çš„æ€»æ•°é‡æ˜¯ï¼š%d", totalQuantity());
 			printf("\n");
 			break;
 		}
 		case 7:
 		{
 			char select_name[20];
-			printf("ÊäÈëÒª²éÕÒÉÌÆ·µÄÃû³Æ");
+			printf("è¾“å…¥è¦æŸ¥æ‰¾å•†å“çš„åç§°");
 			scanf("%s", &select_name);
 			findItem(select_name);
 			printf("\n");
@@ -428,30 +429,30 @@ int main()
 		case 8:
 		{
 			sortList();
-			printf("ÅÅĞòºóµÄÇåµ¥£º\n");
+			printf("æ’åºåçš„æ¸…å•ï¼š\n");
 			myprintf();
 			printf("\n");
 			break;
 		}
 		case 9:
 		{
-			printf("ÏÈ´´½¨µÚ¶ş¸öÇåµ¥\n");
+			printf("å…ˆåˆ›å»ºç¬¬äºŒä¸ªæ¸…å•\n");
 			printf("\n");
-			char a[20] = "ÂÜ²·";
-			char b[20] = "Íæ¾ß";
-			char c[20] = "Ë®±­";
-			char d[20] = "¿óÈªË®";
+			char a[20] = "èåœ";
+			char b[20] = "ç©å…·";
+			char c[20] = "æ°´æ¯";
+			char d[20] = "çŸ¿æ³‰æ°´";
 
 			addItem2(a, 2);
 			addItem2(b, 3);
 			addItem2(c, 2);
 			addItem2(d, 7);
 			addItem2(d, 7);
-			printf("µÚ¶ş¸öÇåµ¥£º\n");
+			printf("ç¬¬äºŒä¸ªæ¸…å•ï¼š\n");
 			myprintf2();
 
 			printf("\n");
-			printf("Á¬½Óºó:\n");
+			printf("è¿æ¥å:\n");
 			mergeLists(&shoppingList, &shoppingList2);
 			myprintf();
 			printf("\n");
@@ -462,9 +463,9 @@ int main()
 		{
 			char delete_name[20];
 			int num;
-			printf("ÊäÈëÒªÉ¾³ıµÄÉÌÆ·Ãû³ÆºÍÒ»¸öÊı×Ö£¬Êı×Ö0±íÊ¾½öÉ¾³ıÒ»¸ö£¬Êı×Ö1±íÊ¾É¾³ı¶à¸öÍ¬ÃûÉÌÆ·\n");
+			printf("è¾“å…¥è¦åˆ é™¤çš„å•†å“åç§°å’Œä¸€ä¸ªæ•°å­—ï¼Œæ•°å­—0è¡¨ç¤ºä»…åˆ é™¤ä¸€ä¸ªï¼Œæ•°å­—1è¡¨ç¤ºåˆ é™¤å¤šä¸ªåŒåå•†å“\n");
 			scanf("%s%d", &delete_name, &num);
-			printf("É¾³ıÉÌÆ·ºóµÄÇåµ¥£º\n");
+			printf("åˆ é™¤å•†å“åçš„æ¸…å•ï¼š\n");
 			deleteItem(delete_name, num);
 			myprintf();
 			printf("\n");
